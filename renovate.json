@@ -1,1 +1,17 @@
-{}
+{
+  "extends": [
+    "config:js-app",
+    "default:maintainLockFilesMonthly",
+    "default:prHourlyLimitNone",
+    "default:rebaseStalePrs"
+  ],
+  "labels": ["dependency"],
+  "schedule": ["every 2 weeks of the year before 12:00 on Monday"],
+  "timezone": "America/New_York",
+  "packageRules": [
+    {
+      "depTypeList": ["devDependencies"],
+      "groupName": ["Dev Dependencies"]
+    }
+  ]
+}
